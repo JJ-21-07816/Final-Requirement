@@ -1,12 +1,12 @@
 # Final-Requirement
 Final Requirements in Advanced Computer Programming. Groupings [4 Contributors]
 
-Leader:
-  Bartolome, John Joshua C.
-Group Members:
-  Medrano, Lyncel Joyce D.
-  Crisostomo, Michael Lorenz
-  Marquinez, Rinche
+> Leader:
+  - Bartolome, John Joshua C.
+> Group Members:
+  - Medrano, Lyncel Joyce D.
+  - Crisostomo, Michael Lorenz
+  - Marquinez, Rinche
   
 # Hotel Management System
 
