@@ -18,7 +18,35 @@ def printCustomerMenu():
     print('[X] EXIT')
 
 # CREATE CUSTOMER
+def CreateCustomer():
+    print("\n<======| CREATE ACCOUNT FOR CUSTOMER |======>")
+    print("Please fill up the following credentials.")
+    try:
+        customerIdExists = False
+        customerId = int(input('Customer ID: '))
 
+        with open("CustomerRecord.txt", "r") as fp:
+            lines = fp.readlines()
+            for n in range(len(lines)):
+                if str(customerId) in lines[n].split():
+                    print('\n|===========> Invalid! | Customer ID already exists! <===========|\n')
+                    customerIdExists = True
+                    break
+                
+        if not customerIdExists:
+            firstName = input('Firstname: ')
+            lastName = input('Lastname: ')
+            email = input('Email: ')
+            phone = input('Phone #: ')
+            customer = Customer(customerId, firstName, lastName, email, phone)
+            with open("CustomerRecord.txt", "a") as myfile:
+                myfile.write("\n")
+                myfile.write(customer.values())
+
+            print('\n|===========> Customer Created Successfully! <===========|\n')
+
+    except ValueError:
+        print("\nInvalid input!\nPlease Try Again!\n")
 
 
 # SEARCH CUSTOMER
