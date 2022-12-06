@@ -148,6 +148,75 @@ def UpdateCustomer():
 
 
 # DELETE CUSTOMER
+def DeleteCustomer():
+    print("\n<======| DELETE A CUSTOMER ACCOUNT |======>")
+    choice = input("How do you want to search a customer?\nPlease search by.\n\n[1] Lastname\n[2] Customer ID #\n\nEnter your Choice: ")
+
+    if choice == '1':
+        lastname = input('Enter lastname: ')
+        isFound = False
+        count = 0
+        with open("CustomerRecord.txt", "r") as fp:
+            lines = fp.readlines()
+            for customerRecords in lines:
+                record = customerRecords.split()
+                if len(record) != 0:
+                    if lastname == record[2]:
+                        count = count + 1
+                        isFound = True
+            if not isFound:
+                print("\n|===========> Customer doesn't exist! <===========|\n")
+            elif count > 1:
+                isFound = False
+                cusID = input("There are multiple customer with the same Lastname!\nPlease enter the Customer ID instead: ")
+                with open("CustomerRecord.txt", "w") as fp:
+                    for line in lines:
+                        record2 = line.split()
+                        if len(record2) != 0:
+                            if record2[0] != cusID:
+                                fp.write(line)
+                            else:
+                                isFound = True
+                        else:
+                            fp.write(line)
+                if isFound:
+                    print('\n|===========> Customer Deleted Successfully! <===========|\n')
+                else:
+                    print("\n|===========> Customer doesn't exist! <===========|\n")
+                
+                
+                fp.close
+            else:
+                with open("CustomerRecord.txt", "w") as fp:
+                    for line in lines:
+                        record2 = line.split()
+                        if len(record2) != 0:
+                            if record2[2] != lastname:
+                                fp.write(line)
+                        else:
+                            fp.write(line)
+                print('\n|===========> Customer Deleted Successfully! <===========|\n')
+                fp.close
+    elif choice == '2':
+        customerId = input('Enter Customer ID: ')
+        isFound = False
+        with open("CustomerRecord.txt", "r") as fp:
+            lines = fp.readlines()
+            with open("CustomerRecord.txt", "w") as fp:
+                for line in lines:
+                    record = line.split()
+                    if len(record) != 0:
+                        if record[0] != customerId:
+                            fp.write(line)
+                        else:
+                            isFound = True
+                    else:
+                        fp.write(line)
+            fp.close
+            if not isFound:
+                print("\n|===========> Customer doesn't exist! <===========|\n")
+            else:
+                print('\n|===========> Customer Deleted Successfully! <===========|\n')
 
 
 def my_sort(line):
