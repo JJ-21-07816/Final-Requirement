@@ -97,7 +97,54 @@ def SearchCustomer():
 
 
 # UPDATE CUSTOMER
+def UpdateCustomer():
+    print("\n<======| UPDATE A CUSTOMER DATA |======>")
+    customerId = input("Enter Customer ID: ")
+    isFound = False
+    with open("CustomerRecord.txt", "r") as fp:
+        lines = fp.readlines()
+        for n in range(len(lines)):
+            record = lines[n].split()
+            if len(record) != 0:
+                if customerId == record[0]:
+                    isFound = True
+                
+                    while True:
+                        isUnique = True
+                        print('\nPlease fill up the following credentials.')
+                        newCusId = input("Enter New Customer ID: ")
+                        for customerRecords in lines:
+                            record2 = customerRecords.split()
+                            if len(record2) != 0:
 
+                                if newCusId == customerId or newCusId == record2[0]:
+                                    print('\n|===========> Customer ID already exists! Please enter a unique Customer ID! <===========|')
+                                    isUnique = False
+                                    break
+                        if isUnique:
+                            break
+                    newFirstName = input("Enter New Firstname: ")
+                    newLastName = input("Enter New Lastname: ")
+                    newEmail = input("Enter New Email: ")
+                    newPhone = input("Enter New Phone #: ")
+                    newRecord = [newCusId, newFirstName, newLastName, newEmail, newPhone]                   
+                    for i in range(len(newRecord)):
+                        if newRecord[i] == "":
+                            newRecord[i] = record[i]
+                
+                    customer = Customer(newRecord[0], newRecord[1], newRecord[2], newRecord[3], newRecord[4])
+                    lines[n] = customer.values().strip() + "\n"
+                    break
+
+        with open("CustomerRecord.txt", "w") as fp:
+            for line in lines:
+                fp.write(line.lstrip())        
+        fp.close
+
+        if not isFound:
+            print("\n|===========> Customer doesn't exist! <===========|\n")
+        else:
+            print('\n|===========> Customer Updated Successfully! <===========|\n')
 
 
 # DELETE CUSTOMER
