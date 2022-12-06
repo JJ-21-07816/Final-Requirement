@@ -222,7 +222,82 @@ def Restaurants():
 
 
 # PAYMENT
+def Payment():
+    print("\n<======| BOOKING |======>")
+    print("Please fill up the neccessary information.")
+    try:
+        paymentIdExists = False
+        paymentId = int(input('Payment ID: '))
+        with open("PaymentRecord.txt", "r") as fp:
+            lines = fp.readlines()
+            for n in range(len(lines)):
+                if str(paymentId) in lines[n].split():
+                    paymentIdExists = True
+                    break
+                else:
+                    paymentIdExists = False
 
+        if paymentIdExists:
+            print('\n|===========> Invalid! | Payment ID already exists! <===========|')
+            Payment()
+        
+        isFound = False
+        bookingId = input('Booking ID: ')
+        with open("BookingRecord.txt", "r") as fp:
+            lines = fp.readlines()
+            for n in range(len(lines)):
+                if bookingId == lines[n].split()[1]:
+                    isFound = True
+                    break
+                else:
+                    isFound = False
+        
+        if not isFound:
+            print("\n|===========> Booking doesn't exist! <===========|")
+            Payment()
+
+
+        if isFound and not paymentIdExists:
+            print("\n|===> PLEASE SELECT ROOM YOU CHECKED IN <===|")
+            print("[1] STANDARD ------ 2000")
+            print("[2] ELITE --------- 3000")
+            print("[3] MANAGERIAL ---- 4000")
+            print("[4] VIP ----------- 6000")
+            print("[5] SUITE --------- 8000\n")
+            c = input('Room: ')
+            if(c == "1"):
+                amount = 2000
+            elif(c == "2"):
+                amount = 2000
+            elif(c == "3"):
+                amount = 4000
+            elif(c == "4"):
+                amount = 6000
+            elif(c == "5"):
+                amount = 8000
+            else:
+                print('\nInvalid input!\nPlease Try Again!\n')
+
+            print("|===> PAYMENT CENTER <===|")
+            pay = int(input('Enter Your Payment: '))
+
+            if(amount > pay):
+                print("\n|===> Sorry you do not have enough balance. <===|")
+                print("|===> Please try again later. <===|\n")
+                Payment()
+            else:
+                change = pay - amount
+                print("{}{}".format('Updated Balance: ', change))
+
+            payment = BookingClass(paymentId, bookingId, amount, pay, change)
+            with open("PaymentRecord.txt", "a") as myfile:
+                myfile.write("\n")
+                myfile.write(payment.values())
+
+            print('\n|===========> Payment Successfull! <===========|\n')
+
+    except ValueError:
+        print("\nInvalid input!\nPlease Try Again!\n")
 
 
 
