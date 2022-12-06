@@ -27,5 +27,3 @@ Feature includes:
   - Restaurants
   - Payment
   - Exit
-
-// Operations [to be continue...]
