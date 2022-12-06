@@ -1,0 +1,2 @@
+Customer ID                              Booking ID                               Room                                     Check In                                 Check Out
+123                                      123456                                   STANDARD                                 1/12/2022                                6/12/2022                               
