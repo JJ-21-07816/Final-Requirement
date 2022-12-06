@@ -135,7 +135,46 @@ def Booking():
         print("\nInvalid input!\nPlease Try Again!\n")
 
 # ROOM INFORMATION
+def RoomInformation():
+    print("\n<======| ROOMS INFORMATION |======>")
+    print("")
+    print("|===> STANDARD <===|")
+    print("-----------------------------------------------------------------")
+    print("ROOM AMENITIES INCLUDES: 1 Double Bed, Television, Telephone,")
+    print("Double-Door Cupboard, 1 Coffee table with 2 sofa, Balcony and")
+    print("an attached washroom with hot/cold water.")
+    print("-----------------------------------------------------------------\n")
 
+    print("|===> ELITE <===|")
+    print("-----------------------------------------------------------------")
+    print("ROOM AMENITIES INCLUDES: 1 Double Bed, Television, Telephone,")
+    print("Double-Door Cupboard, 1 Coffee table with 2 sofa, Balcony and")
+    print("an attached washroom with hot/cold water + Window/Split AC.")
+    print("-----------------------------------------------------------------\n")
+
+    print("|===> MANAGERIAL <===|")
+    print("-----------------------------------------------------------------")
+    print("ROOM AMENITIES INCLUDES: 1 Double Bed + 1 Single Bed, Television,")
+    print("Telephone, a Triple-Door Cupboard, 1 Coffee table with 2 sofa, 1")
+    print("Side table, Balcony with an Accent table with 2 Chair and an")
+    print("attached washroom with hot/cold water.")
+    print("-----------------------------------------------------------------\n")
+
+    print("|===> VIP <===|")
+    print("-----------------------------------------------------------------")
+    print("ROOM AMENITIES INCLUDES: 1 Double Bed + 1 Single Bed, Television,")
+    print("Telephone, a Triple-Door Cupboard, 1 Coffee table with 2 sofa, ")
+    print("1 Side table, Balcony with an Accent table with 2 Chair and an")
+    print("attached washroom with hot/cold water + Window/Split AC.")
+    print("-----------------------------------------------------------------\n")
+
+    print("|===> SUITE <===|")
+    print("-----------------------------------------------------------------")
+    print("ROOM AMENITIES INCLUDES: 2 Double Bed + 1 Single Bed, Television,")
+    print("Telephone, a Triple-Door Cupboard, 1 Coffee table with 2 sofa, ")
+    print("1 Side table, Balcony with an Accent table with 2 Chair and an")
+    print("attached washroom with hot/cold water + Window/Split AC.")
+    print("-----------------------------------------------------------------\n")
 
 
 # RESTAURANTS
