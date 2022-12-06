@@ -50,7 +50,50 @@ def CreateCustomer():
 
 
 # SEARCH CUSTOMER
+def SearchCustomer():
+    print("\n<======| SEARCH A CUSTOMER TO VIEW DATA |======>")
+    choice = input("How do you want to search a customer?\nPlease search by.\n\n[1] Lastname\n[2] Customer ID #\n\nEnter your Choice: ")
+    isFound = False
+    foundCustomers = [];
+    if choice == '1':
+        lastname = input('Enter lastname: ')
+        with open("CustomerRecord.txt", "r") as fp:
+            lines = fp.readlines()
+            for n in range(len(lines)):
+                if lastname == lines[n].split()[2]:
+                    isFound = True
+                    foundCustomers.append(lines[n].split())
+            if isFound:
+                print('\n|===========> Customer Record Found! <===========|')
+                print("{:<25} {:<25} {:<25} {:<25} {:<25}".format("CUSTOMER ID", "FIRSTNAME", "LASTNAME", "EMAIL", "PHONE #"))
+                for i in range(len(foundCustomers)):
+                    print("{:<25} {:<25} {:<25} {:<25} {:<25}".format(foundCustomers[i][0],foundCustomers[i][1],foundCustomers[i][2],foundCustomers[i][3],foundCustomers[i][4]))
+                print("")
+                foundCustomers.clear()
+            else:
+                print("\n|===========> Customer doesn't exist! <===========|\n")
 
+    elif choice == '2':
+        customerId = input('Enter Customer ID: ')
+        with open("CustomerRecord.txt", "r") as fp:
+            lines = fp.readlines()
+            for n in range(len(lines)):
+                if customerId == lines[n].split()[0]:
+                    isFound = True
+                    foundCustomers.append(lines[n].split())
+            if isFound:
+                print('\n|===========> Customer Record Found! <===========|')
+                print('Customer Record Found!\n')
+                print("{:<25} {:<25} {:<25} {:<25} {:<25}".format("CUSTOMER ID", "FIRSTNAME", "LASTNAME", "EMAIL", "PHONE #"))
+                for i in range(len(foundCustomers)):
+                    print("{:<25} {:<25} {:<25} {:<25} {:<25}".format(foundCustomers[i][0],foundCustomers[i][1],foundCustomers[i][2],foundCustomers[i][3],foundCustomers[i][4]))
+                foundCustomers.clear()
+                print("")
+            else:
+                print("\n|===========> Customer doesn't exist! <===========|\n")
+    
+    else:
+        print('\nInvalid input!\nPlease Try Again Later!\n')
 
 
 # UPDATE CUSTOMER
