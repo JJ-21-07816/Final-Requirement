@@ -46,7 +46,8 @@ def CreateCustomer():
             print('\n|===========> Customer Created Successfully! <===========|\n')
 
     except ValueError:
-        print("\nInvalid input!\nPlease Try Again!\n")
+        print("\nInvalid input!\nID only accepts numbers!\nPlease try again...\n")
+        CreateCustomer()
 
 
 # SEARCH CUSTOMER
