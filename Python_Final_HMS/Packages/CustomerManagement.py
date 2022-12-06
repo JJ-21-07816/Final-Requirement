@@ -110,17 +110,21 @@ def UpdateCustomer():
                     isFound = True
                 
                     while True:
-                        isUnique = True
-                        print('\nPlease fill up the following credentials.')
-                        newCusId = input("Enter New Customer ID: ")
-                        for customerRecords in lines:
-                            record2 = customerRecords.split()
-                            if len(record2) != 0:
+                        try:
+                            isUnique = True
+                            print('\nPlease fill up the following credentials.')
+                            newCusId = int(input("Enter New Customer ID: "))
+                            for customerRecords in lines:
+                                record2 = customerRecords.split()
+                                if len(record2) != 0:
 
-                                if newCusId == customerId or newCusId == record2[0]:
-                                    print('\n|===========> Customer ID already exists! Please enter a unique Customer ID! <===========|')
-                                    isUnique = False
-                                    break
+                                    if newCusId == customerId or newCusId == record2[0]:
+                                        print('\n|===========> Customer ID already exists! Please enter a unique Customer ID! <===========|')
+                                        isUnique = False
+                                        break
+                        except ValueError:
+                            print("\nInvalid input!\nID only accepts numbers!\nPlease try again...\n")
+                            UpdateCustomer()
                         if isUnique:
                             break
                     newFirstName = input("Enter New Firstname: ")
