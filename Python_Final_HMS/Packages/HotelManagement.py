@@ -1,0 +1,165 @@
+class BookingClass:
+    def __init__(self, customerId, bookingId, room, checkin, checkout):
+        self.customerId = customerId
+        self.bookingId = bookingId
+        self.room = room
+        self.checkin = checkin
+        self.checkout = checkout
+    
+    def values(self):
+        return ("{:<40} {:<40} {:<40} {:<40} {:<40}".format(self.customerId, self.bookingId, self.room, self.checkin, self.checkout))
+
+class PaymentClass:
+    def __init__(self, paymentId, bookingId, amount, pay, change):
+        self.paymentId = paymentId
+        self.bookingId = bookingId
+        self.amount = amount
+        self.pay = pay
+        self.change = change
+    
+    def values(self):
+        return ("{:<40} {:<40} {:<40} {:<40} {:<40}".format(self.paymentId, self.bookingId, self.amount, self.pay, self.change))
+
+def printHotelMenu():
+    print('[1] BOOKING')
+    print('[2] ROOMS INFORMATION')
+    print('[3] RESTAURANTS')
+    print('[4] PAYMENT')
+    print('[X] EXIT')
+
+# BOOKING
+def Booking():
+    print("\n<======| BOOKING |======>")
+    print("Please fill up the neccessary information.")
+    try:
+        bookingIdExists = False
+        bookingId = int(input('Booking ID: '))
+        with open("BookingRecord.txt", "r") as fp:
+            lines = fp.readlines()
+            for n in range(len(lines)):
+                if str(bookingId) in lines[n].split():
+                    bookingIdExists = True
+                    break
+                else:
+                    bookingIdExists = False
+
+        if bookingIdExists:
+            print('\n|===========> Invalid! | Booking ID already exists! <===========|')
+            Booking()
+        
+        isFound = False
+        customerId = input('Customer ID: ')
+        with open("CustomerRecord.txt", "r") as fp:
+            lines = fp.readlines()
+            for n in range(len(lines)):
+                if customerId == lines[n].split()[0]:
+                    isFound = True
+                    break
+                else:
+                    isFound = False
+        
+        if not isFound:
+            print("\n|===========> Customer doesn't exist! <===========|")
+            Booking()
+
+
+        if isFound and not bookingIdExists:
+            print("\n|===> PLEASE SELECT ROOM <===|")
+            print("[1] STANDARD")
+            print("[2] ELITE")
+            print("[3] MANAGERIAL")
+            print("[4] VIP")
+            print("[5] SUITE\n")
+            c = input('Room: ')
+            if(c == "1"):
+                room = "STANDARD"
+            elif(c == "2"):
+                room = "ELITE"
+            elif(c == "3"):
+                room = "MANGERIAL"
+            elif(c == "4"):
+                room = "VIP"
+            elif(c == "5"):
+                room = "SUITE"
+            else:
+                print('\nInvalid input!\nPlease Try Again!\n')
+
+            print("\n|===> PLEASE SELECT DATE FOR CHECK IN <===|")
+            dayIn = int(input('Day: '))
+            monthIn = int(input('Month: '))
+            yearIn = int(input('Year: '))
+
+            if(dayIn <= 31 and monthIn <= 12 and yearIn >= 2022):
+                checkin = ("{}{}{}{}{}".format(dayIn, "/", monthIn, "/", yearIn))
+            else:
+                print("|===> Error, maybe because of one or more of this following situation! <===|")
+                print("> Day should not be greater than 31.")
+                print("> Month should not be greater than 12.")
+                print("> Year should not be greater than 2022.\n")
+                input('Press enter key to continue...')
+                print('')
+                Booking()
+
+
+            print("\n|===> PLEASE SELECT DATE FOR CHECK OUT <===|")
+            print("{}{}".format('Checked In Date: ', checkin, '\n'))
+            dayOut = int(input('Day: '))
+            monthOut = int(input('Month: '))
+            yearOut = int(input('Year: '))
+
+            if(dayOut <= 31 and monthOut <= 12 and yearOut >= 2022):
+                if(dayOut > dayIn and monthOut >= monthIn and yearOut >= yearIn):
+                    checkout = ("{}{}{}{}{}".format(dayOut, "/", monthOut, "/", yearOut))
+                else:
+                    print("|===> Check Out Date doesn't have to be Less than or Equal to Check In Date! <===|\n")
+                    input('Press enter key to continue...')
+                    print('')
+                    Booking()
+            else:
+                print("|===> Error, maybe because of one or more of this following situation! <===|")
+                print("> Day should not be greater than 31.")
+                print("> Month should not be greater than 12.")
+                print("> Year should not be less than 2022.\n")
+                input('Press enter key to continue...')
+                print('')
+                Booking()
+
+            booking = BookingClass(customerId, bookingId, room, checkin, checkout)
+            with open("BookingRecord.txt", "a") as myfile:
+                myfile.write("\n")
+                myfile.write(booking.values())
+
+            print('\n|===========> Booked Successfully! <===========|\n')
+
+    except ValueError:
+        print("\nInvalid input!\nPlease Try Again!\n")
+
+# ROOM INFORMATION
+
+
+
+# RESTAURANTS
+
+
+
+# PAYMENT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
