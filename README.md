@@ -46,7 +46,6 @@ This System Project on Hotel Management is a general software developed (using P
 
 <br/>
 <br/>
-<br/>
 
 > Hotel Management
   - This feature is where the management of the Hotel is being process.
