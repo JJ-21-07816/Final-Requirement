@@ -28,7 +28,7 @@ This System Project on Hotel Management is a general software developed (using P
   - Payment
   - Exit
  
-# Feutures Description:
+# Features Description:
 > Customer Management
   - This feature is where the management of the customer account is being process.
     * **Create An Account For Customer**
