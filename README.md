@@ -27,3 +27,6 @@ Feature includes:
   - Restaurants
   - Payment
   - Exit
+ 
+ Feuture Descriptions:
+ 
