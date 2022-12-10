@@ -31,8 +31,8 @@ This System Project on Hotel Management is a general software developed (using P
 # Feutures Description:
 > Customer Management
   - This feature is where the management of the customer account is being process.
-  > **Create An Account For Customer**
-    - This operation will process the creation of the customer account.
+> Create An Account For Customer
+  - This operation will process the creation of the customer account.
 > Search A Customer To View Data
   - This operation will process the data display of specified customer account. 
 > Update A Customer Data
@@ -43,7 +43,21 @@ This System Project on Hotel Management is a general software developed (using P
   - This operation will process the data display of all existing customers account.
 > Exit
   - This operation will process the termination of the program.
- 
+
+<br/>
+
+> Hotel Management
+  - This feature is where the management of the Hotel is being process.
+> Booking
+  - This operation will process the booking of the customers where they will fill up necessary information.
+> Room Information
+  - This operation will display all the rooms information of the hotel.
+> Restaurants
+  - This operation will display the menu card of hotel rastaurant.
+> Payment
+  - This operation will process the payment of hotel booked.
+> Exit
+  - This operation will process the termination of the program.
  
  
  
