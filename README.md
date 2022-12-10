@@ -59,7 +59,7 @@ This System Project on Hotel Management is a general software developed (using P
     * **Exit**
       * This operation will process the termination of the program.
  
-# Self-assessment
+# Self-assessment:
 Metric | 4 | 3 | 2 | 1
 | :---: | :---: | :---: | :---: | :---:
 Code Reusability |  | :heavy_check_mark: |  | 
