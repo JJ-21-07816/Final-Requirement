@@ -29,7 +29,7 @@ This System Project on Hotel Management is a general software developed (using P
   - Exit
  
 # Feutures Description:
-> Customer Management
+<summary>Customer Management</summary> 
   - This feature is where the management of the customer account is being process.
     * **Create An Account For Customer**
       * This operation will process the creation of the customer account.
