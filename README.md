@@ -1,5 +1,5 @@
 # Final-Requirement
-Final Requirements in Advanced Computer Programming. Groupings [4 Contributors]
+Final Requirements in Advanced Computer Programming. Groupings of 4 Contributors.
 
 > Leader:
   - Bartolome, John Joshua C.
@@ -29,7 +29,7 @@ This System Project on Hotel Management is a general software developed (using P
   - Exit
  
  **Feuture Descriptions:**
- <u>Customer Management</u>
+ <u> Customer Management </u>
  
  
  
