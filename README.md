@@ -45,7 +45,6 @@ This System Project on Hotel Management is a general software developed (using P
       * This operation will process the termination of the program.
 
 <br/>
-<br/>
 
 > Hotel Management
   - This feature is where the management of the Hotel is being process.
@@ -63,12 +62,12 @@ This System Project on Hotel Management is a general software developed (using P
 # Self-assessment
 Metric | 4 | 3 | 2 | 1
 | :---: | :---: | :---: | :---: | :---:
-Code Reusability |  |  |  |
-Maintainability |  |  |  |
-Scalability |  |  |  |
-Execution |  |  |  |
-Originality |  |  |  |
-Overall Impression |  |  |  |
+Code Reusability |  | :heavy_check_mark: |  | 
+Maintainability |  | :heavy_check_mark: |  | 
+Scalability | :heavy_check_mark: |  |  | 
+Execution |  | :heavy_check_mark: |  | 
+Originality | :heavy_check_mark: |  |  | 
+Overall Impression | :heavy_check_mark: |  |  | 
  
  
  
