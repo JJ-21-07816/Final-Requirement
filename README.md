@@ -24,7 +24,6 @@ This System Project on Hotel Management is a general software developed (using P
 > Hotel Management
   - Booking
   - Rooms Information
-  - Restaurants
   - Payment
   - Exit
  
@@ -52,8 +51,6 @@ This System Project on Hotel Management is a general software developed (using P
       * This operation will process the booking of the customers where they will fill up necessary information.
     * **Room Information**
       * This operation will display all the rooms information of the hotel.
-    * **Restaurants**
-      * This operation will display the menu card of hotel rastaurant.
     * **Payment**
       * This operation will process the payment of hotel booked.
     * **Exit**
