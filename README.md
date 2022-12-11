@@ -1,4 +1,4 @@
-# Final-Requirement
+# Final-Requirement :open_file_folder:
 Final Requirements in Advanced Computer Programming. Groupings of 4 Contributors.
 
 > Leader:
@@ -12,7 +12,7 @@ Final Requirements in Advanced Computer Programming. Groupings of 4 Contributors
 
 This System Project on Hotel Management is a general software developed (using Python) to automate hotel operations in order to simplify them. In this project, “DREAM BIG HOTEL” is the project’s hotel name. It covers major aspects of hotel management; it could perform the following operation features:
 
-# Features include:
+# Features include: :sparkles:
 > Customer Management
   - Create an account for customer.
   - Search a customer to view data.
@@ -27,7 +27,7 @@ This System Project on Hotel Management is a general software developed (using P
   - Payment
   - Exit
  
-# Features Description:
+# Features Description: :clipboard:
 > Customer Management
   - This feature is where the management of the customer account is being process.
     * **Create An Account For Customer**
@@ -56,7 +56,7 @@ This System Project on Hotel Management is a general software developed (using P
     * **Exit**
       * This operation will process the termination of the program.
  
-# Self-assessment:
+# Self-assessment: :bar_chart:
 Metric | 4 | 3 | 2 | 1
 | :---: | :---: | :---: | :---: | :---:
 Code Reusability |  | :heavy_check_mark: |  | 
