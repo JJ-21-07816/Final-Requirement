@@ -23,8 +23,7 @@ class PaymentClass:
 def printHotelMenu():
     print('[1] BOOKING')
     print('[2] ROOMS INFORMATION')
-    print('[3] RESTAURANTS')
-    print('[4] PAYMENT')
+    print('[3] PAYMENT')
     print('[X] EXIT')
 
 # BOOKING
