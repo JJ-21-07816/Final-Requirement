@@ -63,7 +63,7 @@ Code Reusability |  | :heavy_check_mark: |  |
 Maintainability |  | :heavy_check_mark: |  | 
 Scalability | :heavy_check_mark: |  |  | 
 Execution |  | :heavy_check_mark: |  | 
-Originality |  | :heavy_check_mark: |  | 
+Originality | :heavy_check_mark: |  |  | 
 Overall Impression | :heavy_check_mark: |  |  | 
 
 # UML (Unified Modeling Language): :chart_with_upwards_trend:
