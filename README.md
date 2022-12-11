@@ -8,7 +8,7 @@ Final Requirements in Advanced Computer Programming. Groupings of 4 Contributors
   - Crisostomo, Michael Lorenz G.
   - Marquinez, Rinche C.
   
-# Hotel Management System
+# Hotel Management System :hotel:
 
 This System Project on Hotel Management is a general software developed (using Python) to automate hotel operations in order to simplify them. In this project, “DREAM BIG HOTEL” is the project’s hotel name. It covers major aspects of hotel management; it could perform the following operation features:
 
