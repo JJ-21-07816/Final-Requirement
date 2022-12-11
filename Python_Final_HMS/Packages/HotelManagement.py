@@ -178,8 +178,8 @@ def RoomInformation():
 
 # PAYMENT
 def Payment():
-    print("\n<======| BOOKING |======>")
-    print("Please fill up the neccessary information.")
+    print("\n<======| PAYMENT |======>")
+    print("Payment Center.")
     try:
         paymentIdExists = False
         paymentId = int(input('Payment ID: '))
