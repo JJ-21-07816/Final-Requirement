@@ -70,7 +70,7 @@ Overall Impression | :heavy_check_mark: |  |  |
 ...
 
 # Video Presentation: :movie_camera:
-[...](https://youtu.be/nczZ7ZIaolQ)
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/nczZ7ZIaolQ)
  
  
  
