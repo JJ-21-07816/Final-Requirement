@@ -55,8 +55,6 @@ while (select != 'X' and select != 'x'):
             elif choice == '2':
                 HotelManagement.RoomInformation()
             elif choice == '3':
-                HotelManagement.Restaurants()
-            elif choice == '4':
                 HotelManagement.Payment()
             elif choice == 'X' or choice == 'x':
                 welcome()
